@@ -43,8 +43,8 @@ namespace RestaurantManagement
             {
                 // Đưa ra thông báo lỗi khi không thể đóng kết nối được tới cơ sở dữ liệu
                 MessageBox.Show(db.err_database.Message, "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
             }
+            Application.Exit();
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -66,6 +66,9 @@ namespace RestaurantManagement
             }
 
             MessageBox.Show("Chào mừng bạn đến với hệ thống", "Đăng nhập thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Main_Form main_form = new Main_Form();
+            main_form.Show(this);
+            this.Hide();
 
         }
 

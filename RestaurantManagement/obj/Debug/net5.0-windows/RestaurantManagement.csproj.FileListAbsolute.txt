@@ -37,3 +37,8 @@ C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5
 C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\ref\RestaurantManagement.dll
 C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.pdb
 C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.genruntimeconfig.cache
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Home_Form.resources
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Main_Form.resources
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Staff_Form.resources
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.AddStaff_Form.resources
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.UpdateStaff_Form.resources

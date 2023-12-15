@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace RestaurantManagement
 {
-    class Database
+    public class Database
     {
         // Thông tin cần thiết để kết nối cơ sở dữ liệu
         private static string host = "127.0.0.1";

@@ -21,5 +21,9 @@ namespace RestaurantManagement
         public static string insertTableSQL = "INSERT INTO dinner_table VALUES ('{0}', '{1}')";
         public static string deleteTableSQL = "DELETE FROM dinner_table WHERE id='{0}'";
 
+        public static string getAllGroupDishSQL = "SELECT * FROM group_dish";
+        public static string getGroupDishTotalSQL = "SELECT COUNT(*) FROM group_dish";
+        public static string insertGroupDishSQL = "INSERT INTO group_dish VALUES ('{0}', '{1}')";
+        public static string deleteGroupDishSQL = "DELETE FROM group_dish WHERE id='{0}'";
     }
 }

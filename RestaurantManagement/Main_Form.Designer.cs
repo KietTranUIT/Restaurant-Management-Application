@@ -39,6 +39,8 @@ namespace RestaurantManagement
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelShow = new System.Windows.Forms.Panel();
+            this.nhómMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +99,9 @@ namespace RestaurantManagement
             // 
             // thựcĐơnToolStripMenuItem
             // 
+            this.thựcĐơnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nhómMónĂnToolStripMenuItem,
+            this.mónĂnToolStripMenuItem});
             this.thựcĐơnToolStripMenuItem.Name = "thựcĐơnToolStripMenuItem";
             this.thựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(119, 32);
             this.thựcĐơnToolStripMenuItem.Text = "Thực đơn";
@@ -119,6 +124,19 @@ namespace RestaurantManagement
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(1538, 955);
             this.panelShow.TabIndex = 1;
+            // 
+            // nhómMónĂnToolStripMenuItem
+            // 
+            this.nhómMónĂnToolStripMenuItem.Name = "nhómMónĂnToolStripMenuItem";
+            this.nhómMónĂnToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.nhómMónĂnToolStripMenuItem.Text = "Nhóm món ăn";
+            this.nhómMónĂnToolStripMenuItem.Click += new System.EventHandler(this.nhómMónĂnToolStripMenuItem_Click);
+            // 
+            // mónĂnToolStripMenuItem
+            // 
+            this.mónĂnToolStripMenuItem.Name = "mónĂnToolStripMenuItem";
+            this.mónĂnToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.mónĂnToolStripMenuItem.Text = "Món ăn";
             // 
             // Main_Form
             // 
@@ -151,5 +169,7 @@ namespace RestaurantManagement
         private System.Windows.Forms.ToolStripMenuItem hóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.Panel panelShow;
+        private System.Windows.Forms.ToolStripMenuItem nhómMónĂnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mónĂnToolStripMenuItem;
     }
 }

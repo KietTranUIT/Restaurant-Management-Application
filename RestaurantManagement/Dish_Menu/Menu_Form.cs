@@ -11,21 +11,22 @@ using MySql.Data.MySqlClient;
 
 namespace RestaurantManagement
 {
-    public partial class Table_Form : Form
+    public partial class Menu_Form : Form
     {
-        public Table_Form()
+        public Menu_Form()
         {
             InitializeComponent();
         }
 
         Database db = new Database();
 
-        private void Table_Form_Load(object sender, EventArgs e)
+
+        private void Menu_Form_Load(object sender, EventArgs e)
         {
             db.Open();
-            string query = Statement.getAllTableSQL;
+            string query = Statement.getAllGroupDishSQL;
             MySqlCommand command = new MySqlCommand(query, db.con);
-            DataTable table = Table.getTable(command);
+            DataTable table = GroupDish.getGroupDish(command);
             fillGrid(table);
         }
 
@@ -33,29 +34,29 @@ namespace RestaurantManagement
         private void fillGrid(DataTable table)
         {
             // Đặt lại tên cột cho phù hợp
-            table.Columns[0].ColumnName = "Mã bàn";
-            table.Columns[1].ColumnName = "Tên bàn";
+            table.Columns[0].ColumnName = "Mã nhóm";
+            table.Columns[1].ColumnName = "Tên nhóm";
 
-            listTables.ReadOnly = true;
-            listTables.DataSource = table;
+            listGroupDishs.ReadOnly = true;
+            listGroupDishs.DataSource = table;
         }
 
         // Hàm cập nhật lại danh sách nhân viên mới nhất từ cơ sở dữ liệu
         private void RefreshTable()
         {
-            listTables.DataSource = null;
-            string query = Statement.getAllTableSQL;
+            listGroupDishs.DataSource = null;
+            string query = Statement.getAllGroupDishSQL;
             MySqlCommand command = new MySqlCommand(query, db.con);
-            DataTable table = Table.getTable(command);
+            DataTable table = GroupDish.getGroupDish(command);
             fillGrid(table);
         }
 
         private void calBtn_Click(object sender, EventArgs e)
         {
-            string query = Statement.getTableTotalSQL;
+            string query = Statement.getGroupDishTotalSQL;
             MySqlCommand command = new MySqlCommand(query, db.con);
 
-            idTbox.Text = "BA" + (Staff.countStaff(command) + 1).ToString("D4");
+            idTbox.Text = "NH" + (GroupDish.countGroupDish(command) + 1).ToString("D4");
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -65,20 +66,20 @@ namespace RestaurantManagement
 
             if (id == "" || name == "")
             {
-                MessageBox.Show("Chưa điền đầy đủ thông tin cho nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Chưa điền đầy đủ thông tin cho nhóm món ăn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string insert = string.Format(Statement.insertTableSQL, id, name);
-            Error err = Table.insertTable(insert, db);
+            string insert = string.Format(Statement.insertGroupDishSQL, id, name);
+            Error err = GroupDish.insertGroupDish(insert, db);
 
             if (!err.Status)
             {
-                MessageBox.Show(err.Message, "Thêm bàn ăn thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(err.Message, "Thêm nhóm món ăn thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            MessageBox.Show("Thêm bàn ăn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Thêm nhóm món ăn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             idTbox.Text = "";
             nameTbox.Text = "";
             RefreshTable();
@@ -87,23 +88,23 @@ namespace RestaurantManagement
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             // Kiểm tra xem có hàng nào được chọn không
-            if (listTables.SelectedRows.Count > 0)
+            if (listGroupDishs.SelectedRows.Count > 0)
             {
                 // Lấy hàng được chọn
-                DataGridViewRow selectedRow = listTables.SelectedRows[0];
+                DataGridViewRow selectedRow = listGroupDishs.SelectedRows[0];
 
-                string id = selectedRow.Cells["Mã bàn"].Value.ToString();
-                DialogResult result = MessageBox.Show($"Bạn có chắc muốn xóa bàn ăn có mã '{id}'", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                string id = selectedRow.Cells["Mã nhóm"].Value.ToString();
+                DialogResult result = MessageBox.Show($"Bạn có chắc muốn xóa nhóm món ăn có mã '{id}'", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
-                    Error err = Table.deleteTable(id, db);
+                    Error err = GroupDish.deleteGroupDish(id, db);
                     if (!err.Status)
                     {
-                        MessageBox.Show($"Xóa bàn ăn thất bại: {err.Message}", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Xóa nhóm món ăn thất bại: {err.Message}", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    MessageBox.Show("Xóa bàn ăn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa nhóm món ăn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     RefreshTable();
                 }
 

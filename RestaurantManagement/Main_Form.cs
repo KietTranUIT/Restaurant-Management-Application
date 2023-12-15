@@ -58,5 +58,14 @@ namespace RestaurantManagement
             panelShow.Controls.Add(table_form);
             table_form.Show();
         }
+
+        private void nhómMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu_Form menu_form = new Menu_Form() { TopLevel = false, TopMost = true };
+            menu_form.FormBorderStyle = FormBorderStyle.None;
+            panelShow.Controls.Clear();
+            panelShow.Controls.Add(menu_form);
+            menu_form.Show();
+        }
     }
 }

@@ -93,6 +93,7 @@ namespace RestaurantManagement
             this.thôngTinBànĂnToolStripMenuItem.Name = "thôngTinBànĂnToolStripMenuItem";
             this.thôngTinBànĂnToolStripMenuItem.Size = new System.Drawing.Size(321, 36);
             this.thôngTinBànĂnToolStripMenuItem.Text = "Thông tin bàn ăn";
+            this.thôngTinBànĂnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinBànĂnToolStripMenuItem_Click);
             // 
             // thựcĐơnToolStripMenuItem
             // 

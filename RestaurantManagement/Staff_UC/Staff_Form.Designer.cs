@@ -372,7 +372,7 @@ namespace RestaurantManagement
             this.sortTypes.FormattingEnabled = true;
             this.sortTypes.ItemHeight = 25;
             this.sortTypes.Items.AddRange(new object[] {
-            "Họ và tên",
+            "Tên NV",
             "Ngày sinh",
             "Ngày vào làm",
             "Lương"});

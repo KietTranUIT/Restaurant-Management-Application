@@ -36,11 +36,11 @@ namespace RestaurantManagement
             this.thôngTinKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinBànĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thựcĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelShow = new System.Windows.Forms.Panel();
-            this.nhómMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,11 +106,26 @@ namespace RestaurantManagement
             this.thựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(119, 32);
             this.thựcĐơnToolStripMenuItem.Text = "Thực đơn";
             // 
+            // nhómMónĂnToolStripMenuItem
+            // 
+            this.nhómMónĂnToolStripMenuItem.Name = "nhómMónĂnToolStripMenuItem";
+            this.nhómMónĂnToolStripMenuItem.Size = new System.Drawing.Size(249, 36);
+            this.nhómMónĂnToolStripMenuItem.Text = "Nhóm món ăn";
+            this.nhómMónĂnToolStripMenuItem.Click += new System.EventHandler(this.nhómMónĂnToolStripMenuItem_Click);
+            // 
+            // mónĂnToolStripMenuItem
+            // 
+            this.mónĂnToolStripMenuItem.Name = "mónĂnToolStripMenuItem";
+            this.mónĂnToolStripMenuItem.Size = new System.Drawing.Size(249, 36);
+            this.mónĂnToolStripMenuItem.Text = "Món ăn";
+            this.mónĂnToolStripMenuItem.Click += new System.EventHandler(this.mónĂnToolStripMenuItem_Click);
+            // 
             // hóaĐơnToolStripMenuItem
             // 
             this.hóaĐơnToolStripMenuItem.Name = "hóaĐơnToolStripMenuItem";
             this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(110, 32);
             this.hóaĐơnToolStripMenuItem.Text = "Hóa đơn";
+            this.hóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.hóaĐơnToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -124,19 +139,6 @@ namespace RestaurantManagement
             this.panelShow.Name = "panelShow";
             this.panelShow.Size = new System.Drawing.Size(1538, 955);
             this.panelShow.TabIndex = 1;
-            // 
-            // nhómMónĂnToolStripMenuItem
-            // 
-            this.nhómMónĂnToolStripMenuItem.Name = "nhómMónĂnToolStripMenuItem";
-            this.nhómMónĂnToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
-            this.nhómMónĂnToolStripMenuItem.Text = "Nhóm món ăn";
-            this.nhómMónĂnToolStripMenuItem.Click += new System.EventHandler(this.nhómMónĂnToolStripMenuItem_Click);
-            // 
-            // mónĂnToolStripMenuItem
-            // 
-            this.mónĂnToolStripMenuItem.Name = "mónĂnToolStripMenuItem";
-            this.mónĂnToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
-            this.mónĂnToolStripMenuItem.Text = "Món ăn";
             // 
             // Main_Form
             // 

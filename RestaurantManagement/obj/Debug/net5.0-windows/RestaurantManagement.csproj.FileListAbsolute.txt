@@ -44,3 +44,6 @@ C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5
 C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.UpdateStaff_Form.resources
 C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Table_Form.resources
 C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Menu_Form.resources
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Dish_Form.resources
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Bill_Form.resources
+C:\Users\21522265\IT008\RestaurantManagement\RestaurantManagement\obj\Debug\net5.0-windows\RestaurantManagement.Bill.AddBill_Form.resources

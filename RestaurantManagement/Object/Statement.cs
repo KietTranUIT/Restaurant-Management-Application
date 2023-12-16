@@ -25,5 +25,22 @@ namespace RestaurantManagement
         public static string getGroupDishTotalSQL = "SELECT COUNT(*) FROM group_dish";
         public static string insertGroupDishSQL = "INSERT INTO group_dish VALUES ('{0}', '{1}')";
         public static string deleteGroupDishSQL = "DELETE FROM group_dish WHERE id='{0}'";
+
+        public static string getFoodSQL = "SELECT * FROM food";
+        public static string getFoodTotalSQL = "SELECT COUNT(*) FROM food";
+        public static string insertFoodSQL = "INSERT INTO food VALUES ('{0}', '{1}', '{2}', '{3}')";
+        public static string deleteFoodSQL = "DELETE FROM food WHERE id='{0}'";
+        public static string getNameGroupSQL = "SELECT name FROM group_dish";
+
+        public static string getAllBillSQL = "SELECT bill.id, bill.create_date, bill.total, dinner_table.name, staff.name, bill.customer_name, bill.status " +
+                                           "FROM dinner_table INNER JOIN bill ON dinner_table.id = bill.id_table INNER JOIN staff ON bill.id_staff = staff.id";
+        public static string getBillTotalSQL = "SELECT COUNT(*) FROM bill";
+        public static string insertBillSQL = "INSERT INTO bill VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')";
+        public static string deleteBillSQL = "DELETE FROM bill WHERE id='{0}'";
+        public static string getNameStaff = "SELECT name FROM staff";
+        public static string getNameTable = "SELECT name FROM dinner_table";
+        public static string getIdStaff = "SELECT id FROM staff WHERE name='{0}'";
+        public static string getIdTable = "SELECT id FROM dinner_table WHERE name='{0}'";
+
     }
 }

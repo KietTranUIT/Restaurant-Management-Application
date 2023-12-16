@@ -133,5 +133,21 @@ namespace RestaurantManagement
             }
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem có hàng nào được chọn không
+            if (listBills.SelectedRows.Count > 0)
+            {
+                // Lấy hàng được chọn
+                DataGridViewRow selectedRow = listBills.SelectedRows[0];
+
+                // Lấy giá trị từ các ô trong hàng
+                string id = selectedRow.Cells["Mã HĐ"].Value.ToString();
+                int total = int.Parse(selectedRow.Cells["Tổng tiền"].Value.ToString());
+                BillDetail_Form bill_form = new BillDetail_Form(db, id, total);
+                bill_form.Show();
+            }
+        }
     }
 }

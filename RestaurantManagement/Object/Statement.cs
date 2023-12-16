@@ -41,6 +41,18 @@ namespace RestaurantManagement
         public static string getNameTable = "SELECT name FROM dinner_table";
         public static string getIdStaff = "SELECT id FROM staff WHERE name='{0}'";
         public static string getIdTable = "SELECT id FROM dinner_table WHERE name='{0}'";
+        public static string getNameFood = "SELECT name FROM food WHERE id='{0}";
+        public static string getAllNameFood = "SELECT name FROM food";
+
+
+        public static string getAllBillDetailSQL = "SELECT bill_detail.id, bill_detail.bill_id, food.name, bill_detail.price, bill_detail.num " +
+                                           "FROM bill INNER JOIN bill_detail ON bill.id = bill_detail.bill_id INNER JOIN food ON bill_detail.food_id = food.id";
+
+        public static string getIdFood = "SELECT id FROM food WHERE name='{0}'";
+        public static string insertBillDetailSQL = "INSERT INTO bill_detail(bill_id, food_id, price, num) VALUES ('{0}', '{1}', '{2}', '{3}')";
+        public static string updateTotalBillDetail = "UPDATE bill SET total='{0}'";
+        public static string deleteBillDetail = "DELETE FROM bill_detail WHERE id='{0}'";
+        public static string select = "SELECT * FROM bill WHERE id='{0}'";
 
     }
 }
